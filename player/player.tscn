@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqdwall1ddaaa"]
+
+[ext_resource type="Script" path="res://player/path_follow.gd" id="1_iyo02"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_s4smq"]
+
+[sub_resource type="Curve2D" id="Curve2D_mj85c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 1
+
+[sub_resource type="Gradient" id="Gradient_cf5kt"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_olvbn"]
+gradient = SubResource("Gradient_cf5kt")
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_s4smq")
+distance = 200
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource("Curve2D_mj85c")
+
+[node name="PathFollow" type="PathFollow2D" parent="Path"]
+rotation = 1.5458
+loop = false
+script = ExtResource("1_iyo02")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path/PathFollow"]
+scale = Vector2(1, 1)
+texture = SubResource("GradientTexture2D_olvbn")
+
+[node name="Left" type="Line2D" parent="."]
+position = Vector2(25, -25)
+points = PackedVector2Array(0, 0)
+width = 20.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Right" type="Line2D" parent="."]
+position = Vector2(-25, 25)
+points = PackedVector2Array(0, 0)
+width = 20.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Middle" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0)
+width = 50.0
