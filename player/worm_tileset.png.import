@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsu7v2326vo0e"
-path="res://.godot/imported/player_texture.png-fe3fad6dfc63eac0558553e7167f1775.ctex"
+uid="uid://cllidcyf5ujwu"
+path="res://.godot/imported/worm_tileset.png-f7bc592681a6e4c501897152ac0709d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/player_texture.png"
-dest_files=["res://.godot/imported/player_texture.png-fe3fad6dfc63eac0558553e7167f1775.ctex"]
+source_file="res://player/worm_tileset.png"
+dest_files=["res://.godot/imported/worm_tileset.png-f7bc592681a6e4c501897152ac0709d7.ctex"]
 
 [params]
 
