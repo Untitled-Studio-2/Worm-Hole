@@ -52,5 +52,3 @@ sources/1 = SubResource("TileSetAtlasSource_5rxvs")
 [node name="Player" type="TileMapLayer"]
 tile_set = SubResource("TileSet_qg1og")
 script = ExtResource("2_i3ci3")
-
-[node name="Camera2D" type="Camera2D" parent="."]

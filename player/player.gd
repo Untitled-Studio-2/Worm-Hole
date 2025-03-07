@@ -1,6 +1,7 @@
 extends TileMapLayer
 var pos : Vector2i = Vector2.ZERO
 var tile_id : int = 0
+@export var wall_tile_map : TileMapLayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,7 +14,7 @@ func _process(delta: float) -> void:
 	move(input())
 	
 func move(dir : Vector2i) -> bool:
-	if get_cell_source_id(pos+dir) == -1:
+	if get_cell_source_id(pos+dir) == -1 and wall_tile_map.get_cell_source_id(pos+dir) == -1:
 		pos += dir
 		set_cell(pos, 1, Vector2i(0,0))
 		return true
